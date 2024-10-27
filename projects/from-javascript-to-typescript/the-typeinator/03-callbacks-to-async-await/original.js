@@ -1,8 +1,8 @@
 function checkEmotion(knownEmotions, emotion, callback) {
 	// Simulate database processing time by waiting a second...
-	setTimeout(() => {
-		callback(knownEmotions.has(emotion));
-	}, 1000);
+	setTimeout(resolve, 1000);
+
+	return knownEmotions.has(emotion);
 }
 
 function speak(knownEmotions, newEmotion, phrase, callback) {
