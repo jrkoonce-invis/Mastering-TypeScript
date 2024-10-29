@@ -1,6 +1,53 @@
 // Write your types here! ✨
 
-let current = {
+type SpotBase = {
+	name: string;
+	proximity: number;
+	treasure?: string;
+};
+
+type Path = SpotBase & {
+	type: "path";
+	shortcut?: Spot;
+	through: Spot;
+};
+
+type Stream = StreamBeg | StreamMiddle | StreamEnd;
+
+type StreamMiddle = SpotBase & {
+	area: "middle";
+	type: "stream";
+	upstream: Spot;
+	downstream: Spot;
+};
+
+type StreamBeg = SpotBase & {
+	area: "begin";
+	type: "stream";
+	downstream: Spot;
+};
+
+type StreamEnd = SpotBase & {
+	area: "end";
+	type: "stream";
+	upstream: Spot;
+};
+
+type Clearing = SpotBase & {
+	type: "clearing";
+	treasure?: string;
+	through?: Spot;
+};
+
+type Town = SpotBase & {
+	type: "town";
+	through?: Spot;
+	around?: Spot;
+};
+
+type Spot = Path | Clearing | Stream | Town;
+
+let current: Spot | undefined = {
 	name: "Woesong Bridge",
 	proximity: 100,
 	through: {
