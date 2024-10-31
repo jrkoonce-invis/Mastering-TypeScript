@@ -17,17 +17,29 @@ Each project follows a chapter in the Learning TypeScript book and aligns to one
 01 - From TypeScript to JavaScript
 
 - 🥗 The Typinator
-  02 - The Type System
+
+02 - The Type System
+
 - 🥗 System of a Clown
-  03 - Unions and Literals
+
+03 - Unions and Literals
+
 - 🍲 The Narrow Trail
-  04 - Objects
+
+04 - Objects
+
 - 🍲 The Typer
-  05 - Functions
+
+05 - Functions
+
 - 🍲 Structural Kitchen
-  06 - Arrays
+
+06 - Arrays
+
 - 🍲 Text Processor
-  08 - Classes
+
+08 - Classes
+
 - 🍲 The Shape of Types
 
 And more to come!
